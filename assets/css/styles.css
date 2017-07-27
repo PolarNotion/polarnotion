@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  border-top: 1px solid #1F1A0D;
+}
+
 body.open {
   overflow: hidden;
 }
@@ -89,6 +93,7 @@ a:focus, {
 
 .font-primary {
   font-family: "CaslonBlackSH-Regular";
+  letter-spacing: 1px;
 }
 
 .text-window {
@@ -107,6 +112,11 @@ a:focus, {
 
 .border-white {
   border: 1px solid #FFF9F1;
+}
+
+.border-black-top {
+  /*border-top: 1px solid black;*/
+  border-bottom: 1px solid black;
 }
 
 .navbar {
