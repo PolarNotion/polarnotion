@@ -489,8 +489,8 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/js/jquery.lazyload.js"></script>
-  <script src="assets/js/masonry.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/masonry.min.js"></script>
 
   <script type="text/javascript">
     $('a[href^="#"]').on('click', function(event) {
@@ -534,16 +534,15 @@
 
     $(function() {
       $("img.lazy").lazyload({
-        threshold : 200,
-        effect : "fadeIn"
+        event : "lazy-go"
       });
     });
 
-    // $(window).bind("load", function() {
-    //   var timeout = setTimeout(function() {
-    //     $("img.lazy").trigger("sporty")
-    //   }, 5000);
-    // });
+    $(window).bind("load", function() {
+      var timeout = setTimeout(function() {
+        $("img.lazy").trigger("lazy-go")
+      }, 2000);
+    });
 
     // init Masonry
     var $grid = $('.grid').masonry({
