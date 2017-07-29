@@ -36,6 +36,8 @@ img {
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  max-height: 100%;
+  height: initial;
 }
 
 section {
