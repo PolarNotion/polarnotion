@@ -427,3 +427,18 @@ header.pad-section {
     margin: 0px 0px;
   }
 }
+
+/*End it Dog Takeover*/
+@media (max-width: 768px) and (orientation: landscape) {
+  body::after {
+    content: "";
+    background-image: url("../images/portfolio/gifs_random/end-it-dog-2001.gif");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+  }
+}
