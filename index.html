@@ -43,8 +43,6 @@
     <div class="vertical-center text-center position-relative">
 
       <h1 class="text-window">Polar<br><span class="height-sm">Notion</span></h1>
-      <!-- <img class="lazy" data-original="assets/images/polarnotion.png" class="form-group"> -->
-    
       <a class="link-left hidden-xs" href="">< Effectively Human ></a>
       <a class="link-right hidden-xs" href="">Go Boldly Forward >>></a>
 
@@ -97,7 +95,7 @@
             <div class="container container-xs">
               <img class="lazy" data-original="assets/images/secret_handshake.png">
             </div>
-            
+
             <br>
 
             <p>Creating something remarkable should be delightful.</p>
@@ -346,7 +344,7 @@
 
         <br>
         <br>
-        
+
         <div class="form-group">
           <h3>We pursue excellence, not perfection.</h3>
           <p>Whether the work we do or the way we do it, quality is at the forefront of our minds. Mistakes happen, but our pursuit of excellence means we learn fast and are constantly improving.</p>
@@ -379,11 +377,11 @@
     </a>
     <section class="pad-section height-lg border-white">
       <div class="container container-lg text-center">
-        
+
         <h2>Contact</h2>
 
         <p>Though we could most simply be described as a software engineering team that designs and developments web and mobile apps, we are far from normal. Hopefully our values say it best</p>
-        
+
         <br>
 
         <p>
@@ -417,7 +415,7 @@
       }
     });
 
-    $(".takeover-trigger").click(function( event ){ 
+    $(".takeover-trigger").click(function( event ){
       event.preventDefault();
       var takeover = $(this).data('takeover');
 
@@ -461,6 +459,25 @@
     // init Masonry
     var $grid = $('.grid').masonry({
     });
+
+    // Enditboii
+    function readDeviceOrientation() {
+      if (Math.abs(window.orientation) === 90) {
+        $('body::before').css({
+          content: "",
+          background-image: url("../images/portfolio/gifs_random/end-it-dog-2001.gif"),
+          background-size: cover,
+          position: fixed,
+          top: 0,
+          bottom: 0,
+          left: 0,
+          right: 0,
+          z-index: 99999999
+        })
+      }
+    }
+
+    window.onorientationchange = readDeviceOrientation;
 
     $(window).scroll(function(){
       $('.grid').masonry();
