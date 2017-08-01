@@ -30,14 +30,12 @@ body.open {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  max-height: 100%;
-  height: initial;
 }
 
 section {
@@ -322,6 +320,12 @@ header.pad-section {
 
 .grid-item {
   margin-bottom: 30px;
+}
+
+.footer-badge {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .vertical-center {
