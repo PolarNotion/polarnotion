@@ -8,12 +8,12 @@
   <title>Polar Notion : Atlanta Web and Mobile App Development</title>
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@nytimesbits" />
-  <meta name="twitter:creator" content="@nickbilton" />
-  <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
-  <meta property="og:title" content="A Twitter for My Sister" />
-  <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
-  <meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
+  <meta name="twitter:site" content="@polarnotion" />
+  <meta name="twitter:creator" content="@morganjlopes" />
+  <meta property="og:url" content="http://polarnotion.com" />
+  <meta property="og:title" content="Polar Notion. Atlanta Web and Mobile App Development." />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="" />
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -53,7 +53,7 @@
 
   <section>
     <div class="container text-center">
-      <p class="lead font-primary">Build stuff is hard. We simplify web and Mobile app strategy and execution.</p>
+      <p class="lead font-primary">Building for screens is complicated. We simplify web and mobile app strategy and execution.</p>
     </div>
   </section>
 
@@ -67,13 +67,15 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <p>We're a development and design shop that believes beautiful solutions can produce remarkable results.</p>
+          <h3>Strategy, Execution, and Humanity</h3>
+          <p>We're a development and design team that believes beautiful solutions can produce remarkable results.</p>
 
-          <p>Let's create a tool that will guide the journey of your business without weighing you down.</p>
+          <p>Building web and mobile technology can be complicated, confusing, and take too long. Our team uses words you'll understand, continual communication, and breaks down complicated processes into easy to grasp concepts.</p>
 
-          <p>We're a development and design shop that believes beautiful solutions can produce remarkable results.</p>
+          <p>An authentic, human element is present in each interaction, each meeting, and each project we complete.</p>
 
-          <p>Let's create a tool that will guide the journey of your business without weighing you down.</p>
+          <p><strong>Our clients are co-creators. Our team members are people, not <em>resources</em>.</strong></p>
+
         </div>
         <div class="col-sm-4">
           <img src="assets/images/image_1.png">
@@ -478,6 +480,8 @@
           hello@polarnotion.com
         </p>
 
+        <a href="http://m.me/PolarNotion">Start a conversation</a>
+
         <br>
 
         <a href="" class="btn btn-white-outline btn-lg">Email Us</a>
@@ -491,7 +495,6 @@
   <script src="assets/js/jquery.lazyload.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/masonry.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
   <script type="text/javascript">
     $('a[href^="#"]').on('click', function(event) {
@@ -499,7 +502,7 @@
       if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top - 80
         }, 1000);
       }
     });
@@ -535,7 +538,7 @@
 
     $(function() {
       $("img.lazy").lazyload({
-        threshold : 200
+        threshold : 600
       });
     });
 
@@ -548,11 +551,6 @@
     // init Masonry
     var $grid = $('.grid').masonry({
     });
-
-    // // layout Masonry after each image loads
-    // $grid.imagesLoaded().progress( function() {
-    //   $grid.masonry('layout');
-    // });
 
     $(window).scroll(function(){
       $('.grid').masonry();
