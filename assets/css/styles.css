@@ -493,17 +493,136 @@ h2.location-bottom-left {
   top: 40px;
 }
 
-.firefox-visible {
+
+.golden-ratio,
+.golden-ratio nav,
+.golden-ratio .text-window .text,
+.golden-ratio .background-black,
+.golden-ratio .header-line p {
+  background-color: black;
+  color: red;
+  -webkit-text-fill-color: red;
+  stroke: red;
+}
+
+.golden-ratio .navbar-nav > li > a,
+.golden-ratio .link-left,
+.golden-ratio .link-right,
+.golden-ratio .btn-nav,
+.golden-ratio .navbar-item-header svg,
+.golden-ratio .font-primary,
+.golden-ratio .text-white,
+.golden-ratio .stroke-white {
+  color: red;
+  border-color: red;
+  fill: red;
+  stroke: red;
+}
+
+.golden-ratio .btn-nav:hover,
+.golden-ratio .navbar-item-header svg:hover {
+  color: black;
+  border-color: red;
+  background-color: red;
+  fill: black;
+  border-radius: 20px;
+}
+
+.golden-ratio .col-sm-4 img,
+.golden-ratio .col-sm-8 {
+  position: relative;
+  -webkit-filter: invert(1);
+  -o-filter: invert(1);
+  filter: invert(1);
+}
+
+.golden-ratio .col-sm-4::before,
+.golden-ratio .col-sm-8::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 15px;
+  width: calc(100% - 30px);
+  background-image: url("../images/golden-ratio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+}
+
+.golden-ratio .col-sm-4.gr-vertical::before,
+.golden-ratio .col-sm-8.gr-vertical::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 15px;
+  width: calc(100% - 30px);
+  background-image: url("../images/golden-ratio-vertical.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+}
+
+.golden-ratio .col-sm-4.gr-none::before,
+.golden-ratio .col-sm-8.gr-none::before {
+  content: none;
+  position: absolute;
+  top: 0;
+}
+
+.golden-ratio #daVinciCodeTrigger {
+  position: fixed;
+  width: 85px;
+  z-index: 99999999;
+  -webkit-animation: moveX 3s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
+  animation: moveX 3s linear 0s infinite alternate, moveY 20s linear 0s infinite alternate;
+}
+
+.golden-ratio .exit {
+  display: block;
+  color: red;
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000000;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.exit {
   display: none;
 }
 
-@-moz-document url-prefix() {
-  .firefox-hidden {
-    display: none!important;
-  }
-  .firefox-visible {
-    display: inline-block!important;
-  }
+@-webkit-keyframes moveX {
+  from { left: -20%; } to { left: 120%; }
+}
+@-moz-keyframes moveX {
+  from { left: -20%; } to { left: 120%; }
+}
+@-o-keyframes moveX {
+  from { left: -20%; } to { left: 120%; }
+}
+@keyframes moveX {
+  from { left: -20%; transform: rotate(0deg); } to { left: 120%; transform: rotate(720deg); }
+}
+
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 100%; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 100%; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 100%; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 100%; }
+}
+
+#daVinciCodeTrigger {
+  z-index: 9999999;
 }
 
 @media screen and (max-width: 768px) {
