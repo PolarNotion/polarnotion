@@ -61,7 +61,7 @@ h1 {
   line-height: 18vw;
   font-size: 20vw;
   text-transform: uppercase;
-  letter-spacing: 20px;
+  letter-spacing: 1vw;
 }
 
 h1 .height-sm {
@@ -81,8 +81,9 @@ h3 {
   letter-spacing: 1px;
 }
 
-a {
+a:not(.btn) {
   color: #1F1A0D;
+  text-decoration: underline;
 }
 
 a:hover,
@@ -91,17 +92,52 @@ a:focus, {
   color: #1F1A0D;
 }
 
+.header-line {
+  position: relative;
+}
+
+.header-line::after {
+  content: " ";
+  border-top: 1px solid black;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 14px;
+}
+
+.header-line p {
+  display: inline-block;
+  background-color: #FFF9F1;
+  position: relative;
+  z-index: 999;
+  padding: 0px 20px;
+}
+
 .font-primary {
   font-family: "CaslonBlackSH-Regular";
   letter-spacing: 1px;
 }
 
-.text-window {
-  color: transparent;
+h1.text-window {
+  display: inline-flex;
+  width: 100%;
+}
+
+h1 span {
   background: url("../images/backgrounds/alaska_ice.jpg") repeat;
-  background-size: 150%;
-  background-position: center center;
+   background: -webkit-linear-gradient(transparent, transparent),
+             url("../images/backgrounds/alaska_ice.jpg") repeat;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 150%;
+  background-repeat: repeat !important;
+  background-position: center center;
+  color: transparent;
+  background-clip: text;
   position: relative;
   text-align: center;
 }
@@ -171,6 +207,10 @@ a:focus, {
   color: #FFF9F1;
 }
 
+.pad.background-black h3 {
+  margin-bottom: 0px;
+}
+
 .background-cover {
   background-size: cover;
   background-position: center center;
@@ -194,6 +234,11 @@ header.pad-section {
 
 .text-white {
   color: #FFF9F1;
+  fill: #FFF9F1;
+}
+
+.stroke-white {
+  stroke: #FFF9F1;
 }
 
 .text-sm-vw {
@@ -222,6 +267,10 @@ header.pad-section {
 
 .height-lg {
   height: 100%;
+}
+
+.width-lg {
+  width: 100%;
 }
 
 .border-black {
@@ -291,12 +340,22 @@ header.pad-section {
   letter-spacing: 1px;
   padding-top: 25px;
   padding-bottom: 25px;
+  text-decoration: none;
   /*font-weight: bold;*/
 }
 
 .container-fluid {
   padding-right: 30px;
   padding-left: 30px;
+}
+
+/*.row {
+  margin-right: -30px;
+  margin-left: -30px;
+}*/
+
+.container-xs-custom {
+  max-width: 150px;
 }
 
 .container-xs {
@@ -330,7 +389,11 @@ header.pad-section {
 }
 
 .vertical-center {
-  display: inline-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display:  flex;
   justify-content: center;
   flex-direction: column;
   height: 100%;
@@ -338,24 +401,64 @@ header.pad-section {
   width: 100%;
 }
 
+.translate-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .position-relative {
   position: relative;
+  z-index: 99;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.location-bottom-left {
+  bottom: 0px;
+  left: 0px;
+}
+
+h2.location-bottom-left {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.icon-primary {
+  width: 70px;
+}
+
+.float-icon-top-right {
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  margin: 20px;
+}
+
+.float-icon-bottom-right {
+  width: 50px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
 
 .link-left {
   position: absolute;
   left: -70px;
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+  transform: rotate(-90deg) translateY(-50%);
+  top: 50%;
 }
 
 .link-right {
   position: absolute;
   right: -70px;
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -ms-transform: rotate(90deg) translateY(-50%);
+  -webkit-transform: rotate(90deg) translateY(-50%);
+  transform: rotate(90deg) translateY(-50%);
+  top: 50%;
 }
 
 .row-flex-height {
@@ -363,6 +466,9 @@ header.pad-section {
   display: -webkit-flex;
   display: -ms-flexbox;
   display:         flex;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
 }
 
 .takeover {
@@ -370,7 +476,7 @@ header.pad-section {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: #1F1A0D;
   color: #FFF9F1;
   padding: 20px;
   display: none;
@@ -386,7 +492,26 @@ header.pad-section {
   top: 40px;
 }
 
+.firefox-visible {
+  display: none;
+}
+
+@-moz-document url-prefix() {
+  .firefox-hidden {
+    display: none!important;
+  }
+  .firefox-visible {
+    display: inline-block!important;
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+  h1 {
+    line-height: 23vw;
+    font-size: 26vw;
+  }
+
   h2 {
     font-size: 8vw;
     letter-spacing: 1px;
@@ -395,6 +520,28 @@ header.pad-section {
   h3 {
     font-size: 5vw;
     letter-spacing: 1px;
+  }
+
+  header.pad-section {
+    padding: 30px 10px 0px;
+  }
+
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .margin-xs-bottom {
+    margin-bottom: 30px;
+  }
+
+  .col-sm-4 {
+    width: 100%;
   }
 
   .row-flex-height {
@@ -432,5 +579,17 @@ header.pad-section {
 
   .nav.navbar-nav {
     margin: 0px 0px;
+  }
+
+  .square-xs {
+    height: 85vw;
+  }
+
+  .header-line::after {
+    display: none;
+  }
+
+  .icon-primary {
+    width: 50px;
   }
 }
