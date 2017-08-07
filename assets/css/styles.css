@@ -225,7 +225,7 @@ h1 span {
 }
 
 header.pad-section {
-  padding: 60px 20px;
+  padding: 50px 20px 30px;
 }
 
 .btn {
@@ -433,32 +433,33 @@ h2.location-bottom-left {
   top: 0px;
   right: 0px;
   width: 40px;
-  margin: 20px;
+  margin: 30px;
 }
 
 .float-icon-bottom-right {
   width: 50px;
   position: absolute;
-  right: 30px;
-  bottom: 30px;
+  right: 15px;
+  bottom: 0px;
+  margin: 30px;
 }
 
 .link-left {
   position: absolute;
   left: -70px;
-  -ms-transform: rotate(-90deg) translateY(-50%);
-  -webkit-transform: rotate(-90deg) translateY(-50%);
-  transform: rotate(-90deg) translateY(-50%);
-  top: 50%;
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: 43%;
 }
 
 .link-right {
   position: absolute;
   right: -70px;
-  -ms-transform: rotate(90deg) translateY(-50%);
-  -webkit-transform: rotate(90deg) translateY(-50%);
-  transform: rotate(90deg) translateY(-50%);
-  top: 50%;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 43%;
 }
 
 .row-flex-height {
@@ -513,12 +514,12 @@ h2.location-bottom-left {
   }
 
   h2 {
-    font-size: 8vw;
+    font-size: 12vw;
     letter-spacing: 1px;
   }
 
   h3 {
-    font-size: 5vw;
+    font-size: 7vw;
     letter-spacing: 1px;
   }
 
