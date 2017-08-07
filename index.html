@@ -104,7 +104,7 @@
     <div class="container-fluid">
       <div class="row row-flex-height">
         <div class="col-sm-8">
-          <div class="height-lg margin-xs-bottom position-relative vertical-center text-center">
+          <div class="margin-xs-bottom position-relative text-center">
             <img src="assets/images/alaska-window.png">
 
             <div class="position-absolute width-lg pad translate-center">
@@ -379,7 +379,7 @@
         <br>
         <h3>We go boldly forward.</h3>
         <p>Courageous, forward movement is key to innovating and doing work that matters. We collaborate and push ourselves to improve and bring others with us.</p>
-        
+
       </div>
     </section>
   </div>
@@ -504,14 +504,14 @@
             var $this = $(this);
             var elems = $this.children(childElem);
 
-            elems.sort(function() { return (Math.round(Math.random())-0.5); });  
+            elems.sort(function() { return (Math.round(Math.random())-0.5); });
 
-            $this.detach(childElem);  
+            $this.detach(childElem);
 
             for(var i=0; i < elems.length; i++)
-              $this.append(elems[i]);      
+              $this.append(elems[i]);
 
-        });    
+        });
       }
     })(jQuery);
 
