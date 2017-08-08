@@ -548,6 +548,10 @@ h2.location-bottom-left {
   filter: invert(1);
 }
 
+.golden-ratio .col-sm-4.pyramid img {
+  filter: none;
+}
+
 .golden-ratio .col-sm-4::before,
 .golden-ratio .col-sm-8::before {
   content: "";
