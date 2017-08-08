@@ -530,15 +530,16 @@
       });
     }
 
-    $('#daVinciCodeTrigger').click(function(){
+    $('#daVinciCodeTrigger').click(function(e){
+      e.preventDefault();
       $('body').toggleClass('golden-ratio');
       swapOutBears();
       assignGoldenRatio();
     });
 
-    $('.exit').click(function(){
+    $('.exit').click(function(e){
+      e.preventDefault();
       swapOutBears();
-
       $('body').removeClass('golden-ratio');
     })
 
