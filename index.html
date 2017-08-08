@@ -67,7 +67,7 @@
 
       <div class="row row-flex-height">
         <div class="col-sm-4">
-          <div class="height-lg background-black pad text-white text-md-vw square-xs margin-xs-bottom square-js">
+          <div class="position-relative background-black pad text-white text-md-vw square-xs margin-xs-bottom square-js">
             <h2 class="font-primary">Developed for Computers. Designed for Humans.</h2>
             <svg id="Layer_1" data-name="Layer 1" xmlns="//www.w3.org/2000/svg" viewBox="0 0 49.94 49.94" class="float-icon-bottom-right text-white">
               <defs></defs><title>Developed for Computers. Designed for Humans.</title>
@@ -547,7 +547,13 @@
       $(".square-js").each(function(){
         var width = $(this).width();
 
-        $(this).css('min-height', width);
+        if (width > 300) {
+          width = $(this).width() + 30;
+        } else {
+          width = $(this).width() + 110;
+        }
+
+        $(this).css('min-height', width + 'px');
       });
     }).resize();
   </script>
