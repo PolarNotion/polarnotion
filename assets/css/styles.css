@@ -21,6 +21,18 @@ body {
   overflow-x: hidden;
 }
 
+body.dog-2001::before {
+  content: "";
+  background-image: url("../images/portfolio/gifs_random/end-it-dog-2001.gif");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+}
+
 hr {
   border-top: 1px solid #1F1A0D;
 }
