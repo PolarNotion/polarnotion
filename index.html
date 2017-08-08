@@ -546,12 +546,13 @@
     $(window).resize(function(){
 
       $(".square-js").each(function(){
-        var width = $(this).width();
+        var width = $(this).width(),
+            bears = $('.pyramid img').height();
 
         if (width > 300) {
-          width = $(this).width() + 30;
+          width = bears;
         } else {
-          width = $(this).width() + 110;
+          width = $(this).width() + 150;
         }
 
         $(this).css('min-height', width + 'px');
