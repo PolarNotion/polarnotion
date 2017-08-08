@@ -476,17 +476,9 @@
     // Enditboii
     function readDeviceOrientation() {
       if (Math.abs(window.orientation) === 90) {
-        $('body::before').css({
-          "content": "",
-          "background-image": 'url("assets/images/portfolio/gifs_random/end-it-dog-2001.gif")',
-          "background-size": 'cover',
-          "position": 'fixed',
-          "top": 0,
-          "bottom": 0,
-          "left": 0,
-          "right": 0,
-          "z-index": 99999999,
-        })
+        $('body').addClass('dog-2001');
+      } else {
+        $('body').removeClass('dog-2001');
       }
     }
 
