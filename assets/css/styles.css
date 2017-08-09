@@ -653,12 +653,12 @@ h2.location-bottom-left {
 
   h2 {
     font-size: 11vw;
-    letter-spacing: 1px;
+    letter-spacing: .03em;
   }
 
   h3 {
     font-size: 7vw;
-    letter-spacing: 1px;
+    letter-spacing: .03em;
   }
 
   header.pad-section {
