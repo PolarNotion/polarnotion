@@ -451,7 +451,7 @@ h2.location-bottom-left {
 .float-icon-bottom-right {
   width: 50px;
   position: absolute;
-  right: 15px;
+  right: 0px;
   bottom: 0px;
   margin: 30px;
 }
@@ -524,12 +524,15 @@ h2.location-bottom-left {
 .golden-ratio .navbar-item-header svg,
 .golden-ratio .font-primary,
 .golden-ratio .text-white,
-.golden-ratio .stroke-white {
+.golden-ratio .stroke-white,
+.golden-ratio a:not(.btn) {
   color: red;
   border-color: red;
   fill: red;
   stroke: red;
 }
+
+
 
 .golden-ratio .btn-nav:hover,
 .golden-ratio .navbar-item-header svg:hover {
@@ -649,7 +652,7 @@ h2.location-bottom-left {
   }
 
   h2 {
-    font-size: 12vw;
+    font-size: 11vw;
     letter-spacing: 1px;
   }
 

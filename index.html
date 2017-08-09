@@ -142,15 +142,13 @@
     <div class="container-fluid">
       <div class="grid row">
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/static/stuart-atkins-films-macbook.png">
+          <img class="lazy" data-original="assets/images/portfolio/gifs_projects/end-it-movement.gif">
         </div>
         <div class="grid-item col-sm-4">
-          <div class="pad background-black text-white">
-            <h3>“ Their attention to detail puts me at ease ”</h3>
-          </div>
+          <img class="lazy" data-original="assets/images/portfolio/static/passion-app-iphone-crop.png">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/gifs_random/computer-unix-system.gif">
+          <img class="lazy" data-original="assets/images/portfolio/static/upbeet-neon.gif">
         </div>
         <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/gifs_random/computer-people.gif">
@@ -159,32 +157,31 @@
           <img class="lazy" data-original="assets/images/portfolio/static/sw-gif.gif">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/gifs_projects/end-it-movement.gif">
+          <img class="lazy" data-original="assets/images/portfolio/static/stuart-atkins-films-macbook.png">
+        </div>
+        <div class="grid-item col-sm-4">
+          <img class="lazy" data-original="assets/images/portfolio/gifs_random/computer-unix-system.gif">
         </div>
         <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/static/brother-rag-crop.png">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/static/upbeet-neon.gif">
+          <img class="lazy" data-original="assets/images/portfolio/static/blind-contour-polar-bear.png">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/static/blind-contour-polar-bear.png">
+          <div class="pad background-black text-white">
+            <h3>“Their attention to detail puts me at ease”</h3>
+          </div>
         </div>
         <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/gifs_projects/tenrocket2.gif">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/static/passion-app-iphone-crop.png">
-        </div>
-        <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/static/star-wars-marathon-poster.png">
         </div>
         <div class="grid-item col-sm-4">
-          <img class="lazy" data-original="assets/images/portfolio/gifs_projects/pop-plate.gif">
-        </div>
-        <div class="grid-item col-sm-4">
           <div class="pad background-black">
-            <h3>“ You’re wizards mate! ”</h3>
+            <h3>“You’re wizards mate!”</h3>
           </div>
         </div>
         <div class="grid-item col-sm-4">
@@ -192,6 +189,9 @@
         </div>
         <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/static/koozie2.png">
+        </div>
+        <div class="grid-item col-sm-4">
+          <img class="lazy" data-original="assets/images/portfolio/gifs_projects/pop-plate.gif">
         </div>
         <div class="grid-item col-sm-4">
           <img class="lazy" data-original="assets/images/portfolio/gifs_projects/fayette-county-pets.gif">
@@ -279,7 +279,7 @@
         </div>
         <div class="grid-item col-sm-4">
           <div class="background-black pad">
-            <h3>“ They can make miracles happen in terms of coding ”</h3>
+            <h3>“They can make miracles happen in terms of coding”</h3>
           </div>
         </div>
         <div class="grid-item col-sm-4">
@@ -320,7 +320,7 @@
         </div>
         <div class="grid-item col-sm-4">
           <div class="pad background-black">
-            <h3>“ It’s fun to watch great people come together to create great things ”</h3>
+            <h3>“It’s fun to watch great people come together to create great things”</h3>
           </div>
         </div>
         <div class="grid-item col-sm-4">
@@ -549,9 +549,12 @@
         var width = $(this).width(),
             bears = $('.pyramid img').height();
 
-        if (width > 300) {
+        if (width > 220) {
           width = bears;
-        } else {
+        } else if ( window.innerWidth < 768 ) {
+          width = width
+        }
+        else {
           width = $(this).width() + 150;
         }
 
