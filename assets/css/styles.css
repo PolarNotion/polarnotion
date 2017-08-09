@@ -503,6 +503,8 @@ h2.location-bottom-left {
   position: absolute;
   right: 40px;
   top: 40px;
+  stroke: white;
+  color: white;
 }
 
 
@@ -510,11 +512,14 @@ h2.location-bottom-left {
 .golden-ratio nav,
 .golden-ratio .text-window .text,
 .golden-ratio .background-black,
-.golden-ratio .header-line p {
+.golden-ratio .header-line p,
+.golden-ratio .takeover,
+.golden-ratio .border-white {
   background-color: black;
   color: red;
   -webkit-text-fill-color: red;
   stroke: red;
+  border-color: red;
 }
 
 .golden-ratio .navbar-nav > li > a,
@@ -525,6 +530,8 @@ h2.location-bottom-left {
 .golden-ratio .font-primary,
 .golden-ratio .text-white,
 .golden-ratio .stroke-white,
+.golden-ratio .takeover-close,
+.golden-ratio .border-black,
 .golden-ratio a:not(.btn) {
   color: red;
   border-color: red;
@@ -532,11 +539,28 @@ h2.location-bottom-left {
   stroke: red;
 }
 
+.golden-ratio .cls-2 {
+  fill: red;
+  stroke: none;
+}
 
+.golden-ratio .btn.btn-white-outline.btn-lg {
+  border-color: red;
+}
 
 .golden-ratio .btn-nav:hover,
-.golden-ratio .navbar-item-header svg:hover {
+.golden-ratio .btn-nav:active,
+.golden-ratio .btn-nav:focus,
+.golden-ratio .navbar-item-header svg:hover,
+.golden-ratio .navbar-item-header svg:active,
+.golden-ratio .navbar-item-header svg:focus,
+.golden-ratio .navbar-item-header svg:visited,
+.golden-ratio .btn.btn-white-outline.btn-lg:hover,
+.golden-ratio .btn.btn-white-outline.btn-lg:active,
+.golden-ratio .btn.btn-white-outline.btn-lg:focus,
+.golden-ratio .btn.btn-white-outline.btn-lg:visited {
   color: black;
+  -webkit-text-fill-color: black;
   border-color: red;
   background-color: red;
   fill: black;
@@ -567,6 +591,11 @@ h2.location-bottom-left {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 100;
+}
+
+.golden-ratio .col-sm-8::before,
+.golden-ratio .col-sm-8 .width-lg {
+  filter: invert(1);
 }
 
 .golden-ratio .col-sm-4.gr-vertical::before,
