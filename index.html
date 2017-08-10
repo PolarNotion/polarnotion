@@ -534,16 +534,61 @@
     }
 
     $('#daVinciCodeTrigger').click(function(e){
+      var score = 0,
+          scoreCard = '<h2 class="score"></h2>';
+
       e.preventDefault();
-      swapOutBears();
       assignGoldenRatio();
+      swapOutBears();
       $('body').toggleClass('golden-ratio');
+
+      score = 0;
+
+      if ($('h2').hasClass('score') == false) {
+        $('body').append(scoreCard);
+      }
+      $('.score').css({
+                    'position': 'fixed',
+                    'bottom': '25px',
+                    'right': '25px',
+                    'z-index': '999999999',
+                    'display': 'block',
+                    'text-shadow': '2px 2px purple'
+                  });
+
+      function updateScore() {
+        score = score + 1;
+        if (score == 0  || score == 1) {
+          $('.score').text(" ").css({
+                        'position': 'fixed',
+                        'bottom': '25px',
+                        'right': '25px',
+                        'z-index': '999999999',
+                        'display': 'block'
+                      });
+        } else if (score > 1 && score < 20) {
+          $('.score').text("It's taken you " + score + " tries? C'mon bro... -_-");
+        } else {
+          $('.score').text( score + " tries? You're gonna want to hard refresh before the reptilians single you out...");
+        }
+      }
+
+      $('body.golden-ratio').click(function(e){
+        updateScore();
+      });
+
+      $('body.golden-ratio #daVinciCodeTrigger').click(function(e){
+        $('.score').css('display', 'none');
+      });
+
     });
 
     $('.exit').click(function(e){
       e.preventDefault();
       swapOutBears();
       $('body').removeClass('golden-ratio');
+      $('.score').css('display', 'none');
+      score = 0;
     })
 
     $(window).resize(function(){
