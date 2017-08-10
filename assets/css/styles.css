@@ -50,6 +50,10 @@ img {
   user-select: none;
 }
 
+svg {
+  max-width: 100%;
+}
+
 section {
   padding: 15px 0px;
 }
