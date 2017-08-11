@@ -574,10 +574,12 @@
       }
 
       $('body.golden-ratio').click(function(e){
+        e.preventDefault();
         updateScore();
       });
 
       $('body.golden-ratio #daVinciCodeTrigger').click(function(e){
+        e.preventDefault();
         $('.score').css('display', 'none');
       });
 
