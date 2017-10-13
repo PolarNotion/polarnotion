@@ -44,10 +44,14 @@
   <header class="pad-section">
     <div class="vertical-center text-center position-relative">
 
-      <h1 class="text-window firefox-hidden">
-        <!-- <span>adf asdfa</span> -->
+      <div class="header-canvas-container">
+        <div id="pixi_app"></div>
+      </div>
+
+<!--       <h1 class="text-window firefox-hidden">
+        <span>adf asdfa</span>
         <span class="text">Polar<br>Notion</span></span>
-      </h1>
+      </h1> -->
       <a class="link-left hidden-xs" href="https://medium.com/polar-notion/effectively-human-bb9323c5bbeb" target="_blank">< Effectively Human ></a>
       <a class="link-right hidden-xs" href="https://medium.com/polar-notion/go-boldly-forward-f7861269efa9" target="_blank">Go Boldly Forward >>></a>
 
@@ -418,6 +422,8 @@
   <script src="assets/js/jquery.lazyload.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/masonry.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+  <script src="./main.js"></script>
 
   <script type="text/javascript">
     $('a[href^="#"]').on('click', function(event) {
