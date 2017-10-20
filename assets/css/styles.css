@@ -158,6 +158,11 @@ h1 span {
   text-align: center;
 }
 
+#pixi_app {
+  height: 100%;
+  width: 100%;
+}
+
 .overflow-scroll {
   overflow: scroll;
 }
@@ -241,7 +246,7 @@ h1 span {
 }
 
 header.pad-section {
-  padding: 50px 20px 30px;
+  padding: 15px;
 }
 
 .btn {
@@ -695,7 +700,7 @@ h2.location-bottom-left {
   }
 
   header.pad-section {
-    padding: 30px 10px 0px;
+    padding: 0px 10px;
   }
 
   .container-fluid {
