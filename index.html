@@ -46,6 +46,7 @@
 
       <div class="header-canvas-container">
         <div id="pixi_app"></div>
+        <div id="pixi_app--alt" class="hidden"></div>
       </div>
 
 <!--       <h1 class="text-window firefox-hidden">
@@ -544,6 +545,8 @@
       swapOutBears();
       assignGoldenRatio();
       $('body').toggleClass('golden-ratio');
+      $('#pixi_app').toggleClass('hidden');
+      $('#pixi_app--alt').toggleClass('hidden');
     });
 
     $('.exit').click(function(e){

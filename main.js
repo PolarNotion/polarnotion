@@ -50,8 +50,10 @@ app.stage
   .on('mousemove', onPointerMove)
   .on('touchmove', onPointerMove);
 
-var mousex = 0, mouseY = 0;
-var xp = 0, yp = 0;
+var mouseX = 0;
+var mouseY = 0;
+var xp = 0;
+var yp = 0;
 var loop = setInterval(function(){
   // change divisor value to alter damping. higher is slower
   xp += (mouseX - xp) / 10;
@@ -78,7 +80,9 @@ function resize() {
 
 window.onresize = function(event) {
   resize();
+  resize2();
 };
+
 
 //’secret’ specifies the numerical keystrokes that make up the word “endit”
 var secret = "6978687384"; 
@@ -99,3 +103,80 @@ function check_input() {
     // replace filter with end it dog. Will take some refactoring of how we instantiate the app. 
   }
 };
+
+
+// ------  ALTERNATE APP FOR NETHER ZONE --------
+var canvas2 = document.getElementById('pixi_app--alt');
+
+var app2 = new PIXI.Application({
+  height: 1223,
+  width: 2600,
+  backgroundColor: 0x000000,
+});
+canvas2.appendChild(app2.view);
+
+app2.stage.interactive = true;
+
+var container2 = new PIXI.Container();
+app2.stage.addChild(container2);
+
+var padding = 50;
+var bounds = new PIXI.Rectangle(
+  -padding,
+  -padding,
+  app2.renderer.width + padding * 2,
+  app2.renderer.height + padding * 2
+);
+
+var displacementSprite2 = PIXI.Sprite.fromImage('./assets/pixi/goodboii.jpg');
+var displacementFilter2 = new PIXI.filters.DisplacementFilter(displacementSprite2);
+
+app2.stage.addChild(displacementSprite2);
+
+container2.filters = [displacementFilter2];
+
+displacementFilter2.scale.x = 100;
+displacementFilter2.scale.y = 100;
+displacementSprite2.anchor.set(0.5);
+
+var bg2 = PIXI.Sprite.fromImage('./assets/pixi/polar-logo-red.png');
+bg2.width = app2.renderer.width;
+bg2.height = app2.renderer.height;
+bg2.x = -50;
+bg2.y = -50;
+
+bg2.alpha = 1;
+
+container2.addChild(bg2);
+
+app2.stage
+  .on('mousemove', onPointerMove2)
+  .on('touchmove', onPointerMove2);
+
+var mouseX2 = 0;
+var mouseY2 = 0;
+var xp2 = 0;
+var yp2 = 0;
+var loop2 = setInterval(function(){
+  // change divisor value to alter damping. higher is slower
+  xp2 += (mouseX2 - xp2) / 10;
+  yp2 += (mouseY2 - yp2) / 10;
+  displacementSprite2.position.set(xp2 - 25, yp2);
+}, 30);
+
+function onPointerMove2(eventData) {
+  mouseX2 = eventData.data.global.x;
+  mouseY2 = eventData.data.global.y; 
+}
+
+function resize2() {
+  if (window.innerWidth / window.innerHeight >= ratio) {
+    var w = window.innerHeight * ratio;
+    var h = window.innerHeight;
+  } else {
+    var w = window.innerWidth;
+    var h = window.innerWidth / ratio;
+  }
+  app2.renderer.view.style.width = w + 'px';
+  app2.renderer.view.style.height = h + 'px';
+}
