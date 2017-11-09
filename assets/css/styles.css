@@ -496,15 +496,21 @@ h2.location-bottom-left {
 .header-canvas-container {
   position: relative;
   height: 57vw;
+  max-height: 100vh;
 }
 
 .header-canvas-container > div {
   z-index: 0;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .app-displayed {
   z-index: 1 !important;
+}
+
+.app-displayed > canvas {
 }
 
 .takeover {

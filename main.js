@@ -1,6 +1,7 @@
 var canvas = document.getElementById('pixi_app');
 var size = [1920, 1080];
 var ratio = size[0] / size[1];
+var appContainer = document.getElementById('app-container')
 
 var app = new PIXI.Application({
   height: 1223,
