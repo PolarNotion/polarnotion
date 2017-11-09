@@ -493,6 +493,20 @@ h2.location-bottom-left {
   height: 100%;
 }
 
+.header-canvas-container {
+  position: relative;
+  height: 57vw;
+}
+
+.header-canvas-container > div {
+  z-index: 0;
+  position: absolute;
+}
+
+.app-displayed {
+  z-index: 1 !important;
+}
+
 .takeover {
   position: fixed;
   top: 0;
