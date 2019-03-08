@@ -142,6 +142,37 @@ a:focus, {
   padding: 0px 20px;
 }
 
+.header-row {
+  display: flex;
+  position: relative;
+}
+
+.header-row:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #1F1A0D;
+  height: 80%;
+  width: 1px;
+}
+
+.header-half {
+  width: 50%;
+  text-align: left;
+  padding: 100px;
+}
+
+.header-half p {
+  width: 100%;
+  max-width: 400px;
+}
+
+.header-title {
+  font-size: 5.8vw;
+}
+
 .font-primary {
   font-family: "CaslonBlackSH-Regular";
   letter-spacing: 1px;
@@ -268,6 +299,18 @@ header.pad-section {
 
 .btn {
   font-family: "CaslonBlackSH-Regular";
+}
+
+.btn-outline {
+  border: 1px solid #1F1A0D;
+  color: #1F1A0D;
+  font-size: 14px;
+  border-radius: 100px;
+}
+
+.btn-outline:hover {
+  background-color: #1F1A0D;
+  color: #FFF9F1;
 }
 
 .text-white {
@@ -813,6 +856,30 @@ h2.location-bottom-left {
 
   .header-line::after {
     display: none;
+  }
+
+  .header-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-row:after {
+    content: none;
+  }
+
+  .header-half {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .header-half p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-title {
+    font-size: 10vw;
   }
 
   .icon-primary {
