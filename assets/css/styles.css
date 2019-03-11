@@ -85,6 +85,14 @@ h1 .height-sm {
   display: block;
 }
 
+h1.small {
+  font-weight: 100;
+  line-height: 1em;
+  font-size: 10vw;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 h2 {
   font-family: "CaslonBlackSH-Regular";
   font-size: 3.8vw;
@@ -95,6 +103,11 @@ h3 {
   font-family: "CaslonBlackSH-Regular";
   font-size: 2.5vw;
   letter-spacing: 1px;
+  line-height: 1.2em;
+}
+
+h3.small {
+  font-size: 2vw;
 }
 
 a:not(.btn) {
@@ -241,6 +254,10 @@ h1 span {
   padding: 30px;
 }
 
+.pad-y {
+  padding: 20px 0px;
+}
+
 .pad-section {
   padding: 40px 20px;
 }
@@ -296,6 +313,10 @@ header.pad-section {
 
 .border-black {
   border: 1px solid #1F1A0D;
+}
+
+.star {
+  width: 3vw;
 }
 
 .navbar-brand {
@@ -719,8 +740,16 @@ h2.location-bottom-left {
     letter-spacing: .03em;
   }
 
+  h3.small {
+    font-size: 6vw;
+  }
+
   header.pad-section {
     padding: 0px 10px;
+  }
+
+  .star {
+    width: 7vw;
   }
 
   .container-fluid {
