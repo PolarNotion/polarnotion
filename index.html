@@ -48,13 +48,13 @@
       <div class="header-row">
         <div class="header-half">
           <h2 class="header-title">Brand</br>Experience</h2>
-          <p>We live at the intersection of software solutions and brand experience.</p>
-          <a class="btn btn-outline" href="#">Let's Talk</a>
+          <p>Tell your story. We design websites, logos, and branded content.</p>
+          <a class="btn btn-outline takeover-trigger" data-takeover="#contact" data-form-project="brand" href="">Let's Talk</a>
         </div>
         <div class="header-half">
           <h2 class="header-title">Software</br>Solutions</h2>
-          <p>We live at the intersection of software solutions and brand experience.</p>
-          <a class="btn btn-outline" href="#">Let's Talk</a>
+          <p>Build your idea. We develop saas products, digital tools, and ecommerce sites.</p>
+          <a class="btn btn-outline takeover-trigger" data-takeover="#contact" data-form-project="software" href="">Let's Talk</a>
         </div>
       </div>
 
@@ -67,7 +67,7 @@
   <section>
     <div class="container-fluid text-center">
       <div class="header-line">
-        <p class="lead font-primary">Web and mobile experiences made simple. We illuminate ideas.</p>
+        <p class="lead font-primary">We live at the intersection of software solutions and brand experience.</p>
       </div>
     </div>
   </section>
@@ -389,20 +389,20 @@
 
         <h2>Info</h2>
 
-        <p>If you dig our style, you'll love working with us.</p>
-        <p>Though we could most simply be described as a software engineering team that designs and develops web and mobile apps, we are far from normal. Hopefully our values say it best:</p>
+        <p>We live at the intersection of software solutions and brand experience. We believe there is synergy in working on these together, but we also offer deep dives into one or the other.</p>
+        <p>If you dig our style, you'll love working with us. Hopefully our values say it best:</p>
+        <br>
+        <h3>We believe in solutions.</h3>
+        <p>Above all else, our goal is to help you solve problems. As a team of designers and engineers, we love asking big questions and bringing answers to life.</p>
         <br>
         <h3>We pursue excellence, not perfection.</h3>
         <p>Whether the work we do or the way we do it, quality is at the forefront of our minds. Mistakes happen, but our pursuit of excellence means we learn fast and are constantly improving.</p>
         <br>
-        <h3>We create remarkable experiences.</h3>
-        <p>A remarkable experience for our team, our clients, and their customers is our priority. It comes down to honor, respect, and communication.</p>
-        <br>
         <h3>We are effectively human.</h3>
-        <p>Though playfully put, being ‘effectively human’ captures the tension of programing cold, rigid machines for living, breathing people. Efficiency and productivity are important, but aren’t the goal. We engineer solutions that amplify human experiences.</p>
+        <p>There's a tension in programing cold, rigid machines for living, breathing people. Efficiency and productivity are important, but aren’t the goal. We engineer solutions that amplify human experiences.</p>
         <br>
         <h3>We go boldly forward.</h3>
-        <p>Courageous, forward movement is key to innovating and doing work that matters. We collaborate and push ourselves to improve and bring others with us.</p>
+        <p>Courageous, forward movement is key to innovating and doing work that matters. We push ourselves to improve and invite others along for the journey.</p>
 
       </div>
     </section>
@@ -420,17 +420,40 @@
 
         <h2>Contact</h2>
 
-        <p>Coffee, lunch, or beer... whatever works for you. We welcome bold ideas, new opportunities, and all those who enjoy the journey as much as the destination. Let’s create something great together.</p>
+        <!-- <p>Coffee, lunch, or beer... whatever works for you. We welcome bold ideas, new opportunities, and all those who enjoy the journey as much as the destination. Let’s create something great together.</p> -->
 
-        <br>
+        <form action="https://www.formbackend.com/f/247198b15199572d" method="POST">
+          <div class="form-field-custom">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
 
-        <p>
-          team@polarnotion.com
-        </p>
+          <div class="form-field-custom">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
 
-        <br>
+          <div class="form-field-custom">
+            <label for="company">Company/Organization</label>
+            <input type="text" id="compamny" name="company">
+          </div>
 
-        <a href="mailto:team@polarnotion.com" class="btn btn-white-outline btn-lg">Email Us</a>
+          <div class="form-field-custom">
+            <label for="story">Message</label>
+            <textarea id="message" name="message" rows="5" cols="33"></textarea>
+          </div>
+
+          <div class="form-field-custom">
+            <div class="form-field-custom-row">
+              <input type="radio" name="project-type" value="brand" id="brand"><label for="brand">Let's build a brand</label>
+            </div>
+            <div class="form-field-custom-row">
+              <input type="radio" name="project-type" value="software" id="software"><label for="software">Let's build software</label>
+            </div>
+          </div>
+
+          <button class="btn btn-outline" type="submit">Submit form</button>
+        </form>
 
       </div>
     </section>
@@ -458,6 +481,15 @@
     $(".takeover-trigger").click(function( event ){
       event.preventDefault();
       var takeover = $(this).data('takeover');
+      var formType = $(this).data('form-project');
+
+      if (formType == 'software') {
+        $("#brand").attr('checked', false)
+        $("#software").attr('checked', true);
+      } else if (formType == 'brand') {
+        $("#software").attr('checked', false);
+        $("#brand").attr('checked', true);
+      }
 
       $('body').addClass("open");
       $(takeover).fadeIn();
