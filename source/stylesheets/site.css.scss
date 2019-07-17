@@ -1,0 +1,39 @@
+@import "material";
+
+$primary_color: #5e5eff;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+}
+
+.pad {
+  padding: 2rem;
+}
+
+.btn-primary {
+  background-color: $primary_color;
+}
+
+.btn-flat-primary,
+.btn-flat-primary:active,
+.btn-flat-primary:focus,
+.btn-flat-primary:hover,
+.btn-outline-primary,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary:hover {
+  color: $primary_color;
+}
